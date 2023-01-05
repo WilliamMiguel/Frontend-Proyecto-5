@@ -48,6 +48,7 @@ export async function showServices() {
     }
     const data = await response.json();
     const services = data.results
+    console.log(services)
     services.forEach(service => {
         const newOption = document.createElement('option');
         newOption.value = service.id;

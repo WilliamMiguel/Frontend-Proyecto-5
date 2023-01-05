@@ -47,7 +47,7 @@ function functionPaymentsTable(item, expired) {
     }
     return `
     <tr>
-        <th scope="row"> <img src="http://127.0.0.1:8000${item.logo}" style="height:50px;" alt="${item.servicio}"></th>
+        <th scope="row"> <img src="http://127.0.0.1:8000${item.logo}" style="height:35px;" alt="${item.servicio}"></th>
         <td>${item.servicio}</td>
         <td>${item["fecha de pago"]}</td>
         <td>${item.monto}</td>
