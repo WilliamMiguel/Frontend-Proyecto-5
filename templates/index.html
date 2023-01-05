@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/3e03dd0e32.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="py-3">
+    <div class="container-fluid navbar-expand-lg">
+      <div class="container-fluid d-flex">
+        <div class="d-flex">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenuOptions"
+            aria-controls="navbarMenuOptions" aria-expanded="false">
+            <span><i class="fa-solid fa-bars" style="font-size: 25px;"></i></span>
+          </button>
+        </div>
+        <div class="container-fluid collapse navbar-collapse">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active p-2" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" href="new_payment.html">Añadir nuevo pago</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" href="services.html" id="services" hidden>Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" href="users.html" id="users" hidden>Usuarios</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container-fluid d-flex align-items-center justify-content-end">
+          <img id="avatar" width="30px" style="border-radius: 20px;">
+          <h6 class="nav-link px-2 mb-0" id="username"></h6>
+          <button class="btn btn-dark" id="logout">Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid collapse navbar-collapse" id="navbarMenuOptions">
+      <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active p-2" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link p-2" href="new_payment.html">Añadir nuevo pago</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link p-2" href="services.html" id="servicesCollapse" hidden>Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link p-2" href="users.html" id="usersCollapse" hidden>Usuarios</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container-fluid pt-2 px-4">
+    <h1 class="mb-3">Pagos realizados</h1>
+    <div class="table-responsive-md text-center">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Logo</th>
+            <th scope="col">Servicio</th>
+            <th scope="col">Fecha de pago</th>
+            <th scope="col">Monto (S/.)</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="paymentsTable">
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="button" class="btn btn-dark" id="showMoreMade">Ver más</button>
+    </div>
+  </div>
+
+  <div class="container-fluid p-4">
+    <h1 class="mb-3">Pagos vencidos</h1>
+    <div class="table-responsive-md text-center">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Logo</th>
+            <th scope="col">Servicio</th>
+            <th scope="col">Fecha de pago</th>
+            <th scope="col">Monto (S/.)</th>
+            <th scope="col">Multa (S/.)</th>
+          </tr>
+        </thead>
+        <tbody id="expiredPaymentsTable">
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="button" class="btn btn-dark" id="showMoreExpired">Ver más</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script type="module" src="../static/index.js"></script>
+  <script type="module" src="../static/functions.js"></script>
+
+</body>
+
+</html>
